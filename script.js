@@ -1,5 +1,5 @@
 function start(){
-   $("body").css("background-color", "peru")
+   $("body").css("background-color", "cadetblue")
    $("#menu a:first").click();
 }
 $(window).on("load", start);
