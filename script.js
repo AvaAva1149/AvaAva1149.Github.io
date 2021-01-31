@@ -1,17 +1,19 @@
 function start(){
-    $("body").css("background-color", "peru")
-    $("#menu a:first").click();
+   $("body").css("background-color", "peru")
+   $("#menu a:first").click();
 }
-$(window).on("load", start)
+$(window).on("load", start);
 
 
 function loadpage(e){
+
     e.preventDefault();
-    //alert("ooo");
-    $(this).addclass("active");
-    $("#menu a.active").removeclass("active");
-    
+    $("#menu a.active").removeClass("active");
+    $(this).addClass("active");
+
     var href = $(this).attr("href");    
     $("#content").load(href);
+
 }
-$(document).on("click","#menu a", loadpage)
+
+$(document).on("click", "#menu a", loadpage);
